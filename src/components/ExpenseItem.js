@@ -1,6 +1,7 @@
 import React from 'react';
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
+import Card from './UI/Card';
 
 const ExpenseItem = ({title, price, date}) => {
 
@@ -9,13 +10,15 @@ const ExpenseItem = ({title, price, date}) => {
 
 
   return (
-    <div className='expense-item'>
-      <ExpenseDate date={date} />
-      <div className='expense-item__description'>
-        <h2>{title}</h2>
-        <div className='expense-item__price'>{formattedPrice}원</div>
+    <Card clasName='circle'>
+      <div className='expense-item'>
+        <ExpenseDate date={date} />
+        <div className='expense-item__description'>
+          <h2>{title}</h2>
+          <div className='expense-item__price'>{formattedPrice}원</div>
+        </div>
       </div>
-    </div>
+    </Card>
   )
 
 }
