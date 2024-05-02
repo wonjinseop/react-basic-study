@@ -1,8 +1,7 @@
-import React from 'react'
+import React from 'react';
 import Card from './components/UI/Card';
 
 const Hello = (props) => {
-
   console.log('Hello Component!');
   console.log('props: ', props);
 
@@ -13,7 +12,7 @@ const Hello = (props) => {
         Hello React!
       </div>
     </Card>
-  )
-}
+  );
+};
 
 export default Hello;
