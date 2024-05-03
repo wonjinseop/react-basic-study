@@ -3,6 +3,7 @@ import ExpenseItem from './ExpenseItem';
 import './Expenses.css';
 import Card from '../UI/Card';
 import ExpenseFilter from './ExpenseFilter';
+import ExpenseChart from './ExpenseChart';
 
 const Expenses = ({ items }) => {
   // ExpenseItem을 동적으로 렌더링하기.
@@ -48,6 +49,7 @@ const Expenses = ({ items }) => {
   return (
     <Card clasName="expenses">
       <ExpenseFilter onChangeFilter={changedFilterHandler} />
+      <ExpenseChart />
       {expenseContent}
     </Card>
   );
