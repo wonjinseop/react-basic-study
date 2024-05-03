@@ -1,14 +1,23 @@
 import React from 'react';
 import CourseItem from './CourseItem';
-import './CourseList.css';
+import styled from 'styled-components';
+// import './CourseList.css';
+
+const CouseUl = styled.ul`
+  .goal-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+`;
 
 const CourseList = ({ items, onDelete }) => {
   return (
-    <ul className="goal-list">
+    <CouseUl>
       {items.map((item) => {
         return <CourseItem key={item.id} item={item} onDelete={onDelete} />;
       })}
-    </ul>
+    </CouseUl>
   );
 };
 
