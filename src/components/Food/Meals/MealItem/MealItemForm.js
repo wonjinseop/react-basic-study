@@ -16,6 +16,7 @@ const MealItemForm = ({ id, onAddToCart }) => {
   const formSubmitHandler = (e) => {
     e.preventDefault();
     onAddToCart(amount);
+    setAmount(1);
   };
 
   return (
@@ -29,7 +30,7 @@ const MealItemForm = ({ id, onAddToCart }) => {
           min: '1',
           max: '5',
           step: '1',
-          defaultValue: '1',
+          value: amount,
         }}
       />
       <button>담기</button>
